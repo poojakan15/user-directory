@@ -1,5 +1,5 @@
 function changeHeading() {
-    heading.textContent = 'Heading --> Changed'
+    heading.textContent = document.querySelector('#inputText').value
 }
 
 const heading = document.querySelector('#head2')
