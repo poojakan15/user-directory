@@ -1,9 +1,4 @@
-// function changeHeading() {
-//     heading.textContent = document.querySelector('#inputText').value
-// }
 const form = document.querySelector('#userForm')
-
-
 
 const handleSubmit = function (ev) {
   ev.preventDefault()
@@ -14,19 +9,12 @@ const handleSubmit = function (ev) {
   const favColor = form.favColor.value
   const users = document.querySelector('#users')
 
-   const p = document.createElement('p') // create from scratch
-   p.textContent = `${userName}, ${age}`
-   p.style.backgroundColor = favColor
-   users.appendChild(p)
+//    const p = document.createElement('p') // create from scratch
+//    p.textContent = `${userName}, ${age}`
+//    p.style.backgroundColor = favColor
+//    users.appendChild(p)
 
-//    const list = document.createElement('ul')
-   
-//    list.appendChild(nameItem)
-//    list.appendChild(ageItem)
-//    colorItem.appendChild(renderColor())
-//    list.appendChild(colorItem)
-//    users.appendChild(list)
-    renderList()
+   renderList()
 
 //   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
 //   users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
@@ -47,17 +35,22 @@ function renderColor() {
 }
 
 function renderListItem(list) {
-    const userName = form.userName.value
+   const userName = form.userName.value
    const age = form.age.value
 
    const nameItem = document.createElement('li')
    nameItem.textContent = `Name: ${userName}`
+   nameItem.style.font = "italic bold 20px monotype corosiva"
 
    const ageItem = document.createElement('li')
    ageItem.textContent = `Age: ${age}`
+   ageItem.style.font = "italic bold 20px monotype corosiva"
+   
 
    const colorItem = document.createElement('li')
    colorItem.textContent = `Favorite Color: `
+   colorItem.style.font = "italic bold 20px monotype corosiva"
+   
 
    list.appendChild(nameItem)
    list.appendChild(ageItem)
