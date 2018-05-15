@@ -10,11 +10,12 @@ const handleSubmit = function (ev) {
   const userName = form.userName.value
   const age = form.age.value
   const users = document.querySelector('#users')
-  users.innerHTML += '<p>' + userName + ', ' + age + '</p>'
+//   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
+  users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
 //   users.textContent += ' ' + ev.target.userName.value
 //   form.userName = ' '
-form.reset() //resets entire form
-form.userName.focus() //focuses on first input box
+  form.reset() //resets entire form
+  form.userName.focus() //focuses on first input box
 }
 
 // const heading = document.querySelector('#head2')
