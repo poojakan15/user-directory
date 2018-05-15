@@ -13,7 +13,7 @@ const handleSubmit = function (ev) {
   const users = document.querySelector('#users')
 
   const p = document.createElement('p') // create from scratch
-  p.textContent = `${userName}, ${age}, ${favColor}`
+  p.textContent = `${userName}, ${age}`
   p.style.backgroundColor = favColor
   users.appendChild(p)
 
