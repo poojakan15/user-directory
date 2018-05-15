@@ -4,7 +4,8 @@ function changeHeading() {
 
 const handleSubmit = function (ev) {
     ev.preventDefault()
-    heading.textContent = document.querySelector('#inputText').value
+  //  heading.textContent = document.querySelector('#inputText').value
+  heading.textContent = ev.target.changeHead.value
 }
 
 const heading = document.querySelector('#head2')
