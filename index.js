@@ -12,10 +12,20 @@ const handleSubmit = function (ev) {
   const favColor = form.favColor.value
   const users = document.querySelector('#users')
 
-  const p = document.createElement('p') // create from scratch
-  p.textContent = `${userName}, ${age}`
-  p.style.backgroundColor = favColor
-  users.appendChild(p)
+   const p = document.createElement('p') // create from scratch
+   p.textContent = `${userName}, ${age}`
+   p.style.backgroundColor = favColor
+   users.appendChild(p)
+
+   const list = document.createElement('ul')
+   const nameItem = document.createElement('li')
+   nameItem.textContent = `Name: ${userName}`
+   list.appendChild(nameItem)
+   const ageItem = document.createElement('li')
+   ageItem.textContent = `Age: ${age}`
+   list.appendChild(ageItem)
+   users.appendChild(list)
+
 
 //   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
 //   users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
