@@ -3,6 +3,8 @@
 // }
 const form = document.querySelector('#userForm')
 
+
+
 const handleSubmit = function (ev) {
   ev.preventDefault()
 //  heading.textContent = document.querySelector('#inputText').value
@@ -17,28 +19,14 @@ const handleSubmit = function (ev) {
    p.style.backgroundColor = favColor
    users.appendChild(p)
 
-   const list = document.createElement('ul')
-   const nameItem = document.createElement('li')
-   nameItem.textContent = `Name: ${userName}`
-   list.appendChild(nameItem)
-
-   const ageItem = document.createElement('li')
-   ageItem.textContent = `Age: ${age}`
-   list.appendChild(ageItem)
-
-   const colorItem = document.createElement('li')
-   colorItem.textContent = `Favorite Color: `
-
-//    const colorDiv = document.createElement('div') // create separate div for color
-//    colorDiv.style.backgroundColor = favColor
-//    colorDiv.style.width = '6rem'
-//    colorDiv.style.height = '3rem'
-//    colorItem.appendChild(colorDiv)
-   colorItem.appendChild(renderColor())
-   list.appendChild(colorItem)
-
-   users.appendChild(list)
-
+//    const list = document.createElement('ul')
+   
+//    list.appendChild(nameItem)
+//    list.appendChild(ageItem)
+//    colorItem.appendChild(renderColor())
+//    list.appendChild(colorItem)
+//    users.appendChild(list)
+    renderList()
 
 //   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
 //   users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
@@ -56,6 +44,31 @@ function renderColor() {
     colorDiv.style.width = '6rem'
     colorDiv.style.height = '3rem'
     return colorDiv
+}
+
+function renderListItem(list) {
+    const userName = form.userName.value
+   const age = form.age.value
+
+   const nameItem = document.createElement('li')
+   nameItem.textContent = `Name: ${userName}`
+
+   const ageItem = document.createElement('li')
+   ageItem.textContent = `Age: ${age}`
+
+   const colorItem = document.createElement('li')
+   colorItem.textContent = `Favorite Color: `
+
+   list.appendChild(nameItem)
+   list.appendChild(ageItem)
+   colorItem.appendChild(renderColor())
+   list.appendChild(colorItem)
+   users.appendChild(list)
+}
+
+function renderList() {
+    const list = document.createElement('ul')
+    renderListItem(list)
 }
 
 // const heading = document.querySelector('#head2')
