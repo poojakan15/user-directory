@@ -4,14 +4,20 @@
 const form = document.querySelector('#userForm')
 
 const handleSubmit = function (ev) {
-    ev.preventDefault()
-  //  heading.textContent = document.querySelector('#inputText').value
+  ev.preventDefault()
+//  heading.textContent = document.querySelector('#inputText').value
   const form = ev.target
   const userName = form.userName.value
   const age = form.age.value
   const users = document.querySelector('#users')
+
+  const p = document.createElement('p') // create from scratch
+  p.textContent = `${userName}, ${age}`
+  users.appendChild(p)
+
 //   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
-  users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
+//   users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
+
 //   users.textContent += ' ' + ev.target.userName.value
 //   form.userName = ' '
   form.reset() //resets entire form
