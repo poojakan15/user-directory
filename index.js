@@ -9,10 +9,12 @@ const handleSubmit = function (ev) {
   const form = ev.target
   const userName = form.userName.value
   const age = form.age.value
+  const favColor = form.favColor.value
   const users = document.querySelector('#users')
 
   const p = document.createElement('p') // create from scratch
-  p.textContent = `${userName}, ${age}`
+  p.textContent = `${userName}, ${age}, ${favColor}`
+  p.style.backgroundColor = favColor
   users.appendChild(p)
 
 //   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
