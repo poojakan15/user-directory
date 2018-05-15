@@ -1,4 +1,5 @@
 # HOMEWORK
+Make a separate commit for each level of homework.
 
 # DAY 1
 
@@ -10,8 +11,24 @@ Add multiple headings to the page, and make the button chnage the second one.
 
 ## SUPER MEGA BONUS CREDIT
 
-* Add a form to the page
-* Add a text input to the form
-* Update the heading with the text that you type in the text input
+* Add a form to the page.
+* Add a text input to the form.
+* Update the heading with the text that you type in the text input.
 
-make a separate commit for each level of homework
+# DAY 2
+
+* Create a new function called 'renderColor' that returns a 'div' element.
+* Call that function when adding that 'div' to 'colorItem'.
+
+## BONUS CREDIT
+
+* Create a new function called 'renderListItem'.
+* Use it to create the list items for each stat.
+
+## SUPER MEGA BONUS CREDIT
+
+* Create a new function called 'renderList'.
+* Use it to create the list item for each person's stats.
+* Call 'renderListItem' from 'renderList', not directly from 'handleSubmit'.
+
+## SUPER MEGA 

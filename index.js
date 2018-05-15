@@ -29,11 +29,12 @@ const handleSubmit = function (ev) {
    const colorItem = document.createElement('li')
    colorItem.textContent = `Favorite Color: `
 
-   const colorDiv = document.createElement('div') // create separate div for color
-   colorDiv.style.backgroundColor = favColor
-   colorDiv.style.width = '6rem'
-   colorDiv.style.height = '3rem'
-   colorItem.appendChild(colorDiv)
+//    const colorDiv = document.createElement('div') // create separate div for color
+//    colorDiv.style.backgroundColor = favColor
+//    colorDiv.style.width = '6rem'
+//    colorDiv.style.height = '3rem'
+//    colorItem.appendChild(colorDiv)
+   colorItem.appendChild(renderColor())
    list.appendChild(colorItem)
 
    users.appendChild(list)
@@ -46,6 +47,15 @@ const handleSubmit = function (ev) {
 //   form.userName = ' '
   form.reset() //resets entire form
   form.userName.focus() //focuses on first input box
+}
+
+function renderColor() {
+    const favColor = form.favColor.value
+    const colorDiv = document.createElement('div') // create separate div for color
+    colorDiv.style.backgroundColor = favColor
+    colorDiv.style.width = '6rem'
+    colorDiv.style.height = '3rem'
+    return colorDiv
 }
 
 // const heading = document.querySelector('#head2')
