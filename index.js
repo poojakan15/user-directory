@@ -8,10 +8,13 @@ const handleSubmit = function (ev) {
   //  heading.textContent = document.querySelector('#inputText').value
   const form = ev.target
   const userName = form.userName.value
+  const age = form.age.value
   const users = document.querySelector('#users')
-  users.innerHTML += '<p>' + userName + '</p>'
+  users.innerHTML += '<p>' + userName + ', ' + age + '</p>'
 //   users.textContent += ' ' + ev.target.userName.value
-  form.userName = ' '
+//   form.userName = ' '
+form.reset() //resets entire form
+form.userName.focus() //focuses on first input box
 }
 
 // const heading = document.querySelector('#head2')
