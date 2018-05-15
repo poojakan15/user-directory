@@ -3,7 +3,7 @@ const form = document.querySelector('#userForm')
 const handleSubmit = function (ev) {
   ev.preventDefault()
 //  heading.textContent = document.querySelector('#inputText').value
-  const form = ev.target
+// const form = ev.target
   const userName = form.userName.value
   const age = form.age.value
   const favColor = form.favColor.value
@@ -70,3 +70,4 @@ function renderList() {
 // // changeHeading() would execute it as soon as it hits that line of code
 
 form.addEventListener('submit', handleSubmit)
+
