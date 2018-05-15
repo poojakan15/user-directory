@@ -1,5 +1,7 @@
 # HOMEWORK
 
+# DAY 1
+
 Make the button change the text of the heading.
 
 ## BONUS CREDIT
