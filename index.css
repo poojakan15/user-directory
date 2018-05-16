@@ -32,6 +32,23 @@ p {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+dl li {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+dl {
+    background-color: #B63356;
+    padding: 15px 32px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
 
   
   

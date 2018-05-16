@@ -55,5 +55,9 @@ function renderList(data) {
     return list
 }
 
+// function handleTemp() {
+//     HTMLBodyElement.style.backgroundColor = favColor;
+// }
+
 form.addEventListener('submit', handleSubmit)
 
