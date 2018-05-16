@@ -13,7 +13,7 @@ const handleSubmit = function (ev) {
   const users = document.querySelector('#users')
   const list = renderList(user)
   users.appendChild(list)
-  
+
   form.reset() 
   form.userName.focus() 
 }
@@ -39,7 +39,7 @@ function renderListItem(label, value) {
 
 function renderList(data) {
     const list = document.createElement('ul')
-    Object.keys(data).forEach(function(label){
+    Object.keys(data).forEach(label =>{
         const item = renderListItem(label, data[label])
         list.appendChild(item)
       })
