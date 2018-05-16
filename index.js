@@ -5,30 +5,15 @@ const handleSubmit = function (ev) {
   const form = ev.target
 
   const user = {
-      Name: form.userName.value,
-      Age: form.age.value,
+      'Name': form.userName.value,
+      'Age': form.age.value,
       'Favorite Color': renderColor(form.favColor.value),
   }
 
-  const list = document.createElement('ul')
-  Object.keys(user).forEach(function(label){
-        const item = renderListItem(label, user[label])
-        list.appendChild(item)
-      })
-
-
   const users = document.querySelector('#users')
-
-//   list.appendChild(renderListItem('Name', userName))
-//   list.appendChild(renderListItem('Age', age))
-//   list.appendChild(renderListItem('Favorite Color', favColor))
-   users.appendChild(list)
-
-//   renderList()
-
-//   users.innerHTML += '<p>' + userName + ', ' + age + '</p>' //string concatenation
-//   users.innerHTML += `<p>${userName}, ${age}</p>` //string interpolation - template literal
-
+  const list = renderList(user)
+  users.appendChild(list)
+  
   form.reset() 
   form.userName.focus() 
 }
@@ -50,6 +35,15 @@ function renderListItem(label, value) {
         item.textContent += value
     }
     return item
+}
+
+function renderList(data) {
+    const list = document.createElement('ul')
+    Object.keys(data).forEach(function(label){
+        const item = renderListItem(label, data[label])
+        list.appendChild(item)
+      })
+    return list
 }
 
 form.addEventListener('submit', handleSubmit)
