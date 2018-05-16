@@ -11,7 +11,7 @@ const handleSubmit = function (ev) {
   }
 
   const list = document.createElement('ul')
-  Object.keys(user).map(function(label){
+  Object.keys(user).forEach(function(label){
         const item = renderListItem(label, user[label])
         list.appendChild(item)
       })
